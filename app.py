@@ -43,6 +43,11 @@ UPLOADS = BASE / "private_uploads"
 LOGO_FILE = BASE / "star_link_logo.png"
 SECRET_FILE = BASE / ".secret_key"
 
+if not os.getenv("DATABASE_URL"):
+    os.environ["DATABASE_URL"] = os.getenv(
+        "POSTGRES_URL", ""
+    )
+
 CLOUD = bool(os.getenv("DATABASE_URL"))
 ON_VERCEL = os.getenv("VERCEL") == "1"
 
