@@ -1,0 +1,16 @@
+instance/
+private_uploads/
+uploads/
+wellbeing_data/
+.secret_key
+*.db
+*.db-*
+*.sqlite3
+.env
+.env.*
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.backup.py
+upgrade.py
